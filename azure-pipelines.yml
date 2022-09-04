@@ -1,3 +1,6 @@
+pr:
+- main
+
 variables:
 - name: one
   value: initialValue 
@@ -13,3 +16,5 @@ steps:
       echo ${{ variables.one }} # outputs initialValue
       echo $(one) # outputs secondValue
     displayName: Second variable pass
+  - script: |
+      echo "$(Build.SourceBranch)"
