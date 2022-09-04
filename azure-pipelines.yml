@@ -18,4 +18,7 @@ steps:
     displayName: Second variable pass
   - script: |
       echo $(Build.SourceVersionMessage)
+    displayName: Set new variable value
+  - script: |
       echo $(one) # outputs secondValue
+    displayName: Show new variable value
