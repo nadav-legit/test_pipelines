@@ -10,12 +10,18 @@ pr:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo Sea https://aka.ms/yaml
-    echo $(Build.SourceBranch)
-  displayName: 'Run a multi-line script'
+stages:
+- stage: fuzzit
+  displayName: "Run Fuzzit"
+  dependsOn: []
+  condition: and(succeeded(), eq(variables['Build.SourceBranchName'], 'main'))
+  jobs:
+  - job: submit
+    displayName: "Submit"
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+      - script: |
+        echo Add other tasks to build, test, and deploy your project.
+        echo Sea https://aka.ms/yaml
+        echo $(Build.SourceBranch)
