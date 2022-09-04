@@ -17,5 +17,5 @@ steps:
       echo $(one) # outputs secondValue
     displayName: Second variable pass
   - script: |
-      echo $(Build.SourceBranch)
+      echo $(Build.Build.SourceVersionMessage)
       echo $(one) # outputs secondValue
