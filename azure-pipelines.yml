@@ -16,6 +16,6 @@ steps:
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
+    echo Sea https://aka.ms/yaml
     echo $(Build.SourceBranch)
   displayName: 'Run a multi-line script'
