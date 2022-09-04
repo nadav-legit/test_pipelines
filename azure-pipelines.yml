@@ -17,7 +17,9 @@ steps:
       echo $(one) # outputs secondValue
     displayName: Second variable pass
   - script: |
-      echo $(Build.SourceVersionMessage)
+      echo "before write"
+      echo "$(Build.SourceVersionMessage)"
+      echo "after write"
     displayName: Set new variable value
   - script: |
       echo $(one) # outputs secondValue
