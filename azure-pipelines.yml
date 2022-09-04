@@ -22,6 +22,6 @@ stages:
       vmImage: ubuntu-latest
     steps:
       - script: |
-        echo Add other tasks to build, test, and deploy your project.
-        echo Sea https://aka.ms/yaml
-        echo $(Build.SourceBranch)
+          echo Add other tasks to build, test, and deploy your project.
+          echo Sea https://aka.ms/yaml
+          echo $(Build.SourceBranch)
