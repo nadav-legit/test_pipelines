@@ -4,6 +4,7 @@ pr:
 resources:
   pipelines:
   - pipeline: TestPipelineName
+    source: TestPipelineName
   
 variables:
 - name: one
