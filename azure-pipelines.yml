@@ -24,3 +24,8 @@ steps:
   - script: |
       echo $(one) # outputs secondValue
     displayName: Show new variable value
+
+  - script: |
+      ls -l $(System.DefaultWorkingDirectory)/bin/WebApp
+  - publish: $(System.DefaultWorkingDirectory)/bin/WebApp
+    artifact: WebApp
