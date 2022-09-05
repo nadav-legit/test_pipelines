@@ -1,3 +1,6 @@
 # security-lib-ci YAML pipeline
+trigger:
+- main
+
 steps:
 - bash: echo "The security-lib-ci pipeline runs first"
