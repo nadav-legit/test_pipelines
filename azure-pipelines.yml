@@ -26,6 +26,7 @@ steps:
     displayName: Show new variable value
 
   - script: |
+      echo "data" > $(System.DefaultWorkingDirectory)/bin/WebApp
       ls -l $(System.DefaultWorkingDirectory)/bin/WebApp
   - publish: $(System.DefaultWorkingDirectory)/bin/WebApp
     artifact: WebApp
