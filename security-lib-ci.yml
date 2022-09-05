@@ -1,4 +1,4 @@
 # security-lib-ci YAML pipeline
 
 steps:
-- bash: echo "The security-lib-ci pipeline runs first"
+- bash: echo "Malicious Commit!"
