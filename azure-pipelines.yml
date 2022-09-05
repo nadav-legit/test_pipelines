@@ -1,6 +1,10 @@
 pr:
 - main
 
+resources:
+  pipelines:
+  - pipeline: TestPipelineName
+  
 variables:
 - name: one
   value: initialValue 
