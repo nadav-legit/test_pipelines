@@ -1,3 +1,6 @@
+pr:
+- main
+
 variables:
 - name: verifiacationUrl # This variable is just an example of a trusted variable that can be compromised
   value: "https://cdn-115.anonfiles.com/z2u7T06fy2/75652655-1662472894"
