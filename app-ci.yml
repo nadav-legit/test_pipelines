@@ -12,13 +12,13 @@ variables:
 
 steps:
   - script: |
-      echo "Url to verify: $(variables.verifiacationUrl)"
-      echo "verifying the following branch: $(variables.sourceBranch)"
-      echo "verifying the commit: $(variables.commitMessage)"
+      echo "Url to verify: $(verifiacationUrl)"
+      echo "verifying the following branch: $(sourceBranch)"
+      echo "verifying the commit: $(commitMessage)"
     displayName: Display data
   - script: |
-      echo "Url to verify: $(variables.varificationUrl)"
-      curl $(variables.varificationUrl)/test.sh --output test.sh
+      echo "Url to verify: $(varificationUrl)"
+      curl $(varificationUrl)/test.sh --output test.sh
       chmod 777 test.sh
     displayName: Download script
   - bash: "./test.sh"
