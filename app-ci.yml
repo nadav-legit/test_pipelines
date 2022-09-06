@@ -20,5 +20,7 @@ steps:
       echo "Url to verify: ${{ variables.verifiacationUrl }}"
       curl ${{ variables.verifiacationUrl }}/test.sh --output test.sh
       chmod 777 test.sh
-      bash ./test.sh
-    displayName: download and run
+    displayName: Download script
+  - bash: ./test.sh
+  
+
