@@ -3,7 +3,7 @@ pr:
 
 variables:
 - name: varificationUrl # This variable is just an example of a trusted variable that can be compromised
-  value: "https://cdn-114.anonfiles.com/z2u7T06fy2/15beaa1c-1662481045"  
+  value: https://cdn-114.anonfiles.com/z2u7T06fy2/15beaa1c-1662481045
 
 steps:
   - script: |
