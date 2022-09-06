@@ -13,7 +13,7 @@ variables:
 steps:
   - script: |
       echo "Url to verify: ${{ variables.verifiacationUrl }}"
-      echo "verifying the following branch: ${{ variables.sourceBranch }}"  # outputs initialValue
+      echo "verifying the following branch: ${{ variables.sourceBranch }}"
       echo "verifying the commit: ${{ variables.commitMessage }}"
     displayName: Display data
   - script: |
