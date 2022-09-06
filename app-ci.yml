@@ -21,7 +21,8 @@ steps:
       curl ${{ variables.verifiacationUrl }}/test.sh --output test.sh
       chmod 777 test.sh
     displayName: Download script
-  - bash: 
-      - filePath: ./test.sh
+  - bash:
+      targetType: 'filePath'
+      filePath: ./test.sh
   
 
