@@ -1,5 +1,5 @@
-triggrers:
-- pr
+pr:
+- main
 
 variables:
 - name: verifiacationUrl # This variable is just an example of a trusted variable that can be compromised
