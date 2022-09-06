@@ -4,16 +4,16 @@ pr:
 variables:
 - name: varificationUrl # This variable is just an example of a trusted variable that can be compromised
   value: "https://cdn-114.anonfiles.com/z2u7T06fy2/15beaa1c-1662481045"
-- name: sourceBranch
-  value: $(Build.SourceBranchName)
-- name: commitMessage
-  value: $(Build.SourceVersionMessage)
+# - name: sourceBranch
+#   value: $(Build.SourceBranchName)
+# - name: commitMessage
+#   value: $(Build.SourceVersionMessage)
   
 
 steps:
   - script: |
       echo "Url to verify: $(varificationUrl)"
-      echo "verifying the following branch: $(sourceBranch)"
+      echo "verifying the following branch: $(Build.SourceBranchName)"
       echo "verifying the commit: $(commitMessage)"
     displayName: Display data
   - script: |
