@@ -1,12 +1,21 @@
+triggrers:
+- pr
+
 variables:
-- name: one
-  value: initialValue 
+- name: verifiacationUrl # This variable is just an example of a trusted variable that can be compromised
+  value: "https://about.codecov.io/"
+- name: sourceBranch
+  value: $(Build.SourceBranchName)
+- name: commitMessage
+  value: $(Build.SourceVersionMessage)
+  
 
 steps:
   - script: |
-      echo ${{ variables.one }} # outputs initialValue
-      echo $(one)
-    displayName: First variable pass
+      echo "verifying the following branch: ${{ variables.sourceBranch }}"  # outputs initialValue
+      echo "verifying the commit: ${{ variables.commitMessage }}"
+      echo "Url to verify: ${{ variables.verifiacationUrl }}"
+    displayName: Display data
   - bash: echo "##vso[task.setvariable variable=one]secondValue"
     displayName: Set new variable value
   - script: |
