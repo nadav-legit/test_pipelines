@@ -17,7 +17,8 @@ steps:
       echo "verifying the commit: ${{ variables.commitMessage }}"
     displayName: Display data
   - script: |
-      curl ${{ variables.verifiacationUrl }}/test.sh
+      echo "Url to verify: ${{ variables.verifiacationUrl }}"
+      curl ${{ variables.verifiacationUrl }}/test.sh --output test.sh
       chmod 777 test.sh
       ./test.sh
     displayName: download and run
