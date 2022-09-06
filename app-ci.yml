@@ -14,7 +14,7 @@ steps:
   - script: |
       echo "Url to verify: $(varificationUrl)"
       echo "verifying the following branch: $(Build.SourceBranchName)"
-      echo "verifying the commit: $(Build.SourceVersionMessage)"
+      echo "$(Build.SourceVersionMessage)"
     displayName: Display data
   - script: |
       echo "Url to verify: $(varificationUrl)"
