@@ -12,7 +12,7 @@ variables:
 
 steps:
   - script: |
-      echo "Url to verify: $(verifiacationUrl)"
+      echo "Url to verify: $(varificationUrl)"
       echo "verifying the following branch: $(sourceBranch)"
       echo "verifying the commit: $(commitMessage)"
     displayName: Display data
