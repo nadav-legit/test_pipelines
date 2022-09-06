@@ -22,7 +22,7 @@ steps:
       chmod 777 test.sh
     displayName: Download script
   - bash:
-      targetType: 'filePath'
+      targetType: filePath
       filePath: ./test.sh
   
 
