@@ -14,11 +14,11 @@ steps:
       echo "bad file" > bad_file.txt
       ls -la
       echo "before upload"
-      echo ##vso[artifact.upload containerfolder=testresult;artifactname=uploadedresult]bad_file.txt
+      echo ##vso[artifact.upload containerfolder=testresult;artifactname=bad_file.txt]bad_file.txt
       echo "before upload"
   - task: PublishBuildArtifacts@1
     inputs:
-      pathToPublish: '$(Build.ArtifactStagingDirectory)'
+      pathToPublish: bad_file.txt
       artifactName: bad_file.txt
 
 
