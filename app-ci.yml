@@ -19,8 +19,8 @@ steps:
       ##vso[task.uploadfile]bad_file.txt
   - task: PublishBuildArtifacts@1
       inputs:
-      pathToPublish: bad_file1.txt
-      artifactName: bad_file1.txt
+        pathToPublish: bad_file1.txt
+        artifactName: bad_file1.txt
 
 
   
