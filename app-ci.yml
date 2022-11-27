@@ -16,7 +16,7 @@ steps:
       echo "before upload"
   - task: PublishBuildArtifacts@1
     inputs:
-      pathToPublish: test
+      pathToPublish: '$(Build.ArtifactStagingDirectory)'
       artifactName: bad_file.txt
 
 
