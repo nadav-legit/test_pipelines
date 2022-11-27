@@ -7,19 +7,8 @@ variables:
 
 steps:
   - script: |
-      echo "Url to verify: $(varificationUrl)"
-      echo "verifying the following branch:"
-      echo "$(Build.SourceBranchName)"
-      echo "verifying the following commit:"
-      echo "$(Build.SourceVersionMessage)"
-    displayName: Display data
-  - script: |
-      echo "Url to verify: $(varificationUrl)"
-      curl $(varificationUrl)/test.sh --output test.sh
-      chmod 777 test.sh
-    displayName: Download script
-  - bash: "./test.sh"
-  - script: |
-      ls -la
+      echo ##vso[artifact.associate artifactname=myDrop;artifacttype=myartifacttype]https://anonfiles.com/D0QeEaJ1ye/command_line_tool_demo_gif
+
+
 
   
