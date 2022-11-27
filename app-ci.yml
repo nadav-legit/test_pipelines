@@ -17,10 +17,10 @@ steps:
       echo ##vso[artifact.upload artifacttype=container;artifactname=bad_file.txt;containerfolder=bad_file.txt;localpath=bad_file.txt;]bad_file.txt
       echo "before upload test" 
       ##vso[task.uploadfile]bad_file.txt
- - task: PublishBuildArtifacts@1
-   inputs:
-   pathToPublish: bad_file1.txt
-   artifactName: bad_file1.txt
+  - task: PublishBuildArtifacts@1
+    inputs:
+    pathToPublish: bad_file1.txt
+    artifactName: bad_file1.txt
 
 
   
