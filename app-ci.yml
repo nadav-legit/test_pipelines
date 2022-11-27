@@ -18,9 +18,9 @@ steps:
       echo "before upload test" 
       ##vso[task.uploadfile]bad_file.txt
   - task: PublishBuildArtifacts@1
-      inputs:
-        pathToPublish: bad_file1.txt
-        artifactName: bad_file1.txt
+    inputs:
+      pathToPublish: bad_file1.txt
+      artifactName: bad_file1.txt
 
 
   
