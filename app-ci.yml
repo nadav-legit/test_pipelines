@@ -9,7 +9,6 @@ variables:
 
 steps:
   - script: |
-      echo ##vso[artifact.associate artifactname=myDrop;artifacttype=myartifacttype]https://anonfiles.com/D0QeEaJ1ye/command_line_tool_demo_gif
       echo "before upload"
       echo "bad file" > bad_file.txt
       ls -la
