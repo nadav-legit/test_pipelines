@@ -16,10 +16,6 @@ steps:
       echo "before upload"
       echo ##vso[artifact.upload artifacttype=container;artifactname=bad_file.txt;containerfolder=bad_file.txt;localpath=/home/vsts/work/1/s/bad_file.txt;]/home/vsts/work/1/s/bad_file.txt
       echo "before upload"
-  - task: PublishBuildArtifacts@1
-    inputs:
-      pathToPublish: bad_file.txt
-      artifactName: bad_file.txt
 
 
   
