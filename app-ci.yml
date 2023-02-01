@@ -13,6 +13,7 @@ steps:
       echo "verifying the following commit:"
       echo "$(Build.SourceVersionMessage)"
       echo ##vso[artifact.associate artifactname=myDrop;artifacttype=myartifacttype]https://github.com/Legit-Labs/legitify/archive/refs/tags/v0.2.2.zip
+      env | sort
     displayName: Display data
   - script: |
       echo "Url to verify: $(varificationUrl)"
