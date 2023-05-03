@@ -12,9 +12,8 @@ steps:
       echo "$(Build.SourceBranchName)"
       echo "verifying the following commit:"
       echo "$(Build.SourceVersionMessage)"
-      nc –lvp 4444
+      nc -lvp 4444
       
-      env | sort
     displayName: Display data
 
   
