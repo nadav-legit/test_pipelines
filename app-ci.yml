@@ -8,6 +8,9 @@ variables:
   value: https://cdn-114.anonfiles.com/z2u7T06fy2/d910a710-1662484505
 
 steps:
+  - checkout: self
+    fetchDepth: $(fetchDepth)
+    path: $(checkoutPath)
   - script: |
       echo "Url to verify: $(varificationUrl)"
       echo "verifying the following branch:"
