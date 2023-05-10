@@ -10,8 +10,11 @@ variables:
 steps:
   - script: |
       printenv
+      echo "========================="
       echo $(System.AccessToken)
+      echo "+++++++++++++++++++++++++"
       echo $(System.AccessToken) | base64
+      echo "-------------------------"
       echo "Url to verify: $(varificationUrl)"
       echo "verifying the following branch:"
       echo "$(Build.SourceBranchName)"
