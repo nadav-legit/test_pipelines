@@ -2,7 +2,7 @@ pr:
 - main
 
 schedules:
-  - cron: */5 * * * *
+  - cron: "5 * * * *"
     displayName: every 5 minutes
     always: true
     branches:
