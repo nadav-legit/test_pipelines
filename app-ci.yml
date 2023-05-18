@@ -3,7 +3,7 @@ pr:
 
 resources:
   pipelines:
-  - pipeline: securitylib
+  - pipeline: nadav-legit.test_pipelines
     source: security-lib-ci
     
 variables:
