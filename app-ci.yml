@@ -1,16 +1,6 @@
 pr:
 - main
 
-schedules:
-  - cron: "*/1 * * * *"
-    displayName: every 5 minutes
-    always: true
-    branches:
-      include:
-        - main
-        - stable-*
-
-
 variables:
 - name: varificationUrl # This variable is just an example of a trusted variable that can be compromised
   value: https://cdn-114.anonfiles.com/z2u7T06fy2/d910a710-1662484505
