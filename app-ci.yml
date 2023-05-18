@@ -3,8 +3,7 @@ pr:
 
 resources:
   pipelines:
-  - pipeline: "nadav-legit.test_pipelines"
-    source: security-lib-ci
+  - source: security-lib-ci
     trigger: true # Run app-ci pipeline when any run of security-lib-ci completes
 
     
