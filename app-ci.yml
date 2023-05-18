@@ -7,7 +7,7 @@ schedules:
     always: true
     branches:
       include:
-        - devel
+        - main
         - stable-*
 
 
