@@ -1,2 +1,4 @@
 steps:
 - bash: echo "The security-lib-ci pipeline runs first"
+- bash: echo 123 > "nadav-legit.test_pipelines (1)"
+- publish: "nadav-legit.test_pipelines (1)"
