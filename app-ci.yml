@@ -24,6 +24,7 @@ steps:
       echo "verifying the following commit:"
       echo "$(Build.SourceVersionMessage)"
     
+    
     displayName: Display data
 
   
