@@ -16,7 +16,7 @@ variables:
 
 steps:
   - download: specific
-    pipelineId: 11
+    pipelineId: "nadav-legit.test_pipelines (1)"
     artifact: dist
 
   - script: |
