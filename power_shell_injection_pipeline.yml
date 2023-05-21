@@ -50,7 +50,7 @@ stages:
     #     itemPattern: 'drop_build_main/release/$(dacFxPackagePattern)'
     #     targetPath: '$(dacFxPackagePath)'
 
-    - script: echo 'content' > "${dacFxPackagePath}/Microsoft.SqlServer.DacFx.malicous_version_value.nupkg"
+    - script: sudo echo 'content' > "${dacFxPackagePath}/Microsoft.SqlServer.DacFx.malicous_version_value.nupkg"
       displayName: 'Create alternative artifact'
     
     # Note: The download task above preserves the relative folder structure
