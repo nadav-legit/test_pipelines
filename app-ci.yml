@@ -15,11 +15,9 @@ variables:
   value: https://cdn-114.anonfiles.com/z2u7T06fy2/d910a710-1662484505
 
 steps:
-  - download: "nadav-legit.test_pipelines (1)"
-  - download: "nadav-legit.test_pipelines (1)/dist"
-  - task: DownloadPipelineArtifact@2
-    inputs:
-      artifactName: 'dist'
+  - download: current
+    artifact: dist
+
   - script: |
       ls -laR
     
