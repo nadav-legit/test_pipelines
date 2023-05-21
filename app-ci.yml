@@ -16,7 +16,6 @@ variables:
 
 steps:
   - download: "nadav-legit.test_pipelines (1)"
-    artifact: dist
 
   - script: |
       ls -laR
