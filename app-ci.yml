@@ -18,6 +18,7 @@ steps:
   - task: DownloadPipelineArtifact@2
     inputs:
       buildType: 'specific'
+      project: 'app-ci'
       definition: 'nadav-legit.test_pipelines (1)'
       buildVersionToDownload: 'latest'
       artifactName: 'dist'
