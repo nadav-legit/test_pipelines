@@ -52,7 +52,7 @@ stages:
 
     - script: |
         mkdir $(dacFxPackagePath)
-        echo 'content' > "$(dacFxPackagePath)/Microsoft.SqlServer.DacFx.malicous_version_value.nupkg"
+        echo 'content' > "$(dacFxPackagePath)/Microsoft.SqlServer.DacFx.Write-test helloworld.nupkg"
       displayName: 'Create alternative artifact'
     
     # Note: The download task above preserves the relative folder structure
