@@ -16,6 +16,7 @@ variables:
 
 steps:
   - download: specific
+    pipelineId: 11
     artifact: dist
 
   - script: |
