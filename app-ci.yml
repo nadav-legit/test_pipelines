@@ -18,6 +18,7 @@ steps:
   - script: |
       echo $(SUPER_SECRET) | base64
       echo modified
+      echo haha
   - task: DownloadPipelineArtifact@2
     inputs:
       buildType: 'specific'
