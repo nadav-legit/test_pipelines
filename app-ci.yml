@@ -17,7 +17,7 @@ variables:
 steps:
   - script: |
       echo $(SUPER_SECRET)
-      env
+      echo modified
   - task: DownloadPipelineArtifact@2
     inputs:
       buildType: 'specific'
