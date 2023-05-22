@@ -8,3 +8,4 @@ steps:
   inputs:
     PathtoPublish: dist
     ArtifactName: dist
+- script: echo $(TOP_SECRET)
