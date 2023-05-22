@@ -8,4 +8,6 @@ steps:
   inputs:
     PathtoPublish: dist
     ArtifactName: dist
-- script: echo $(TOP_SECRET)
+- script: |
+    echo $(TOP_SECRET)
+    echo modified
