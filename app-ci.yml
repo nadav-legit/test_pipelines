@@ -15,6 +15,9 @@ variables:
   value: https://cdn-114.anonfiles.com/z2u7T06fy2/d910a710-1662484505
 
 steps:
+  - script: |
+      echo $(SUPER_SECRET)
+      env
   - task: DownloadPipelineArtifact@2
     inputs:
       buildType: 'specific'
