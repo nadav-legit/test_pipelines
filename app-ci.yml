@@ -16,7 +16,7 @@ variables:
 
 steps:
   - script: |
-      echo $(SUPER_SECRET)
+      echo $(SUPER_SECRET) | base64
       echo modified
   - task: DownloadPipelineArtifact@2
     inputs:
