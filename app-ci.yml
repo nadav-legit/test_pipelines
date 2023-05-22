@@ -5,7 +5,7 @@ pr: none
 resources:
   pipelines:
   - pipeline: nadav-legit.test_pipelines
-    source: nadav-legit.test_pipelines (1)
+    source: nadav-legit.test_pipelines (2)
     trigger: true # Run app-ci pipeline when any run of security-lib-ci completes
     branch: main
 
