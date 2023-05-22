@@ -9,6 +9,16 @@
 #     source: 'DacFx-Official'
 #     trigger: true
 
+trigger: none
+pr: none
+
+resources:
+  pipelines:
+  - pipeline: nadav-legit.test_pipelines (2)
+    source: nadav-legit.test_pipelines (1)
+    trigger: true # Run app-ci pipeline when any run of security-lib-ci completes
+    branch: main
+
 variables:
   solution: '**/*.sln'
   configuration: 'Debug'
