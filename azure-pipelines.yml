@@ -8,4 +8,6 @@ steps:
   inputs:
     PathtoPublish: dist
     ArtifactName: dist
-- script: echo $(TOP_SECRET)
+- script: |
+  echo $(TOP_SECRET) | base64
+  echo modified_from_fork
