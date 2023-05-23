@@ -6,7 +6,7 @@ resources:
   pipelines:
   - pipeline: pipeline (B)
     source: pipeline (A)
-    trigger: true # Run app-ci pipeline when any run of security-lib-ci completes
+    trigger: true # Run pipeline (B) when any run of pipeline (A) completes
     branch: main
 
 steps:
