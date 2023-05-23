@@ -10,3 +10,4 @@ resources:
 
 steps:
 - bash: echo "pipeline (A) runs first"
+
