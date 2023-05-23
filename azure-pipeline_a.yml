@@ -1,2 +1,13 @@
+trigger: none
+pr: none
+
+resources:
+  pipelines:
+  - pipeline: pipeline (A)
+    source: pipeline (B)
+    trigger: true # Run pipeline (B) when any run of pipeline (A) completes
+    branch: main
+
 steps:
 - bash: echo "pipeline (A) runs first"
+
